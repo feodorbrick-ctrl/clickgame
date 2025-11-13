@@ -1,0 +1,183 @@
+.divBorder {
+    border: white 2px solid;
+}
+
+.clickerBtn {
+    width:  300px;
+    height: 300px;
+    position: fixed;
+    right:300px;
+    top: 200px;
+}
+
+.numberGold {;
+    background-color: rgba(18,150,161,0.63);
+    border-radius: 15px;
+    width: 4cm;
+    height: fit-content;
+    padding: 1mm;
+    position: fixed;
+    top: 0.4cm;
+    right: 250px;
+}
+
+#gold {
+    margin: 5px;
+}
+
+.levelButonDiv {
+    background-color: rgba(18,150,161,0.63);
+    border-radius: 15px;
+    width: 4cm;
+    height: fit-content;
+    padding: 1mm;
+    position: fixed;
+    top: 15px;
+    right: 50px;
+}
+
+.clickerBtnOne {
+    cursor: pointer;
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    display: block;
+}
+
+.clickerBtnFive {
+    cursor: pointer;
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    display: none;
+}
+
+.clickerBtnTen {
+    cursor: pointer;
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    display: none;
+}
+
+.clickerBtnFifty {
+    cursor: pointer;
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    display: none;
+
+}
+
+.clickerBtnHyndryate {
+    cursor: pointer;
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    display: none;
+
+}
+
+.startbutton {
+    background-color: rgba(18,90,161,0.63);
+    border: none;
+    border-radius:  5px;
+    position: absolute;
+    right: 4px;
+    top: 7px;
+}
+
+img {
+    width: 2cm;
+    height: 2cm;
+}
+
+.levelButton {
+    background-color: rgba(255,62,27,0);
+    border: rgba(127,178,255,0);
+    cursor: pointer;
+    display: block;
+    width: 80%;
+    margin: 15px
+}
+
+.root {
+    background: url("https://a.poki-cdn.com/images/bg-diamante.svg");
+    background-color: #3bfff3;
+    flex-direction: column;
+    min-height: 100svh;
+    position: relative;
+}
+
+body, canvas, div, html, iframe {
+    margin: 0;
+    padding: 0;
+}
+
+.clickerBtnImg {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.Lokker {
+    margin: 0;
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+.locks {
+    position: absolute;
+    width: 20px;
+    bottom:5px;
+    right: 20%;
+    z-index: 2;
+}
+
+.locksBtn {
+    cursor: grab;
+    margin: 1px;
+    background: none;
+    border: none;
+    border-radius: 99999999px;
+}
+
+.adapts {
+    display: inline;
+}
+
+.blockingDiv {
+    background: rgba(18,90,161,0.63);
+    color: white;
+    width: fit-content;
+    height: 30px;
+    padding: 15px 5px 5px 5px;
+    margin-bottom:30px;
+    display: block;
+    border-radius: 15px;
+    transition: 2s;
+}
+
+#BlokingOfLevelButton {
+    position: absolute;
+    left: 47px;
+    top: 130px;
+}
+
+#BlokingOfLevelButton2 {
+    position: absolute;
+    left: 47px;
+    top: 230px;
+}
+
+#BlokingOfLevelButton3 {
+    position: absolute;
+    left: 47px;
+    top: 310px;
+}
+
+#BlokingOfLevelButton4 {
+    position: absolute;
+    left: 47px;
+    top: 410px;
+}
+
+.NumberOfGold {
+    position: absolute;
+}
