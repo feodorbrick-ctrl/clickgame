@@ -5,50 +5,61 @@ let purchaseOkButton = false
 let purchaseGoodButton = false
 let purchaseBestButton  = false
 
-let lokalcost = {
-    purchaseBadButtonSafe: false,
-    purchaseOkButtonSafe: false,
-    purchaseGoodButtonSafe: false,
-    purchaseBestButtonSafe: false,
-    moneyNumBerSafe: '0'
-}
-let userJSON = JSON.stringify(lokalcost,null,2)
 
 async function safe () {
     localStorage.setItem('goldSave', document.getElementById('gold').textContent)
-    localStorage.setItem('SafeBadButton', purchaseBadButton)
-    localStorage.setItem('SafeOkButton', purchaseOkButton)
-    localStorage.setItem('SafeGoodButton',purchaseGoodButton)
-    localStorage.setItem('SafeBestButton', purchaseBestButton)
+    localStorage.setItem('SafeBadButton', purchaseBadButton.toString())
+    localStorage.setItem('SafeOkButton', purchaseOkButton.toString())
+    localStorage.setItem('SafeGoodButton',purchaseGoodButton.toString())
+    localStorage.setItem('SafeBestButton', purchaseBestButton.toString())
+
+    console.log(`purchaseBadButton ${localStorage.getItem('SafeBadButton')}`)
+    console.log(`purchaseOkButton ${localStorage.getItem('SafeOkButton')}`)
+    console.log(`purchaseGoodButton ${localStorage.getItem('SafeGoodButton')}`)
+    console.log(`purchaseBestButton ${localStorage.getItem('SafeBestButton')}`)
 }
 
 function UnSafe() {
     document.getElementById('gold').textContent = localStorage.getItem('goldSave')
-    lokalcost.purchaseBadButtonSafe = localStorage.getItem('SafeBadButton')
-    lokalcost.purchaseOkButtonSafe = localStorage.getItem('SafeOkButton')
-    lokalcost.purchaseGoodButtonSafe = localStorage.getItem('SafeGoodButton')
-    lokalcost.purchaseBestButtonSafe = localStorage.getItem('SafeBestButton')
-    // JSON.parse(localStorage.getItem('Safe'))
 
-    lokalcost = userJSON
-    // purchaseBadButton = userJSON.purchaseBadButtonSafe
-    // purchaseOkButton = userJSON.purchaseOkButtonSafe
-    // purchaseGoodButton = userJSON.purchaseGoodButtonSafe
-    // purchaseBestButton = userJSON.purchaseBestButtonSafe
+    console.log(`purchaseBadButton ${localStorage.getItem('SafeBadButton')==='true'}`)
+    console.log(`purchaseOkButton ${localStorage.getItem('SafeOkButton')==='true'}`)
+    console.log(`purchaseGoodButton ${localStorage.getItem('SafeGoodButton')==='true'}`)
+    console.log(`purchaseBestButton ${localStorage.getItem('SafeBestButton')==='true'}`)
 
-    if (lokalcost.purchaseBadButtonSafe) {
+    purchaseBadButton = localStorage.getItem('SafeBadButton')==='true'
+    purchaseOkButton = localStorage.getItem('SafeOkButton')==='true'
+    purchaseGoodButton = localStorage.getItem('SafeGoodButton')==='true'
+    purchaseBestButton = localStorage.getItem('SafeBestButton')==='true'
+
+    if (purchaseBadButton) {
+        document.getElementById('gold').textContent = goldNum.toString() + '$'
+        document.getElementById('BlokingOfLevelButton').style.display = 'none'
+        document.getElementById('lockBtn').style.display = 'none'
+        document.getElementById('pLock').style.display = 'none'
         displayOnCoociesFive()
     }
-    if (lokalcost.purchaseOkButtonSafe) {
+    if (purchaseOkButton) {
         displayOnCoociesTen()
+        document.getElementById('gold').textContent = goldNum.toString() + '$'
+        document.getElementById('BlokingOfLevelButton2').style.display = 'none'
+        document.getElementById('lockBtn2').style.display = 'none'
+        document.getElementById('pLock2').style.display = 'none'
     }
-    if (lokalcost.purchaseGoodButtonSafe) {
+    if (purchaseGoodButton) {
+        document.getElementById('gold').textContent = goldNum.toString() + '$'
+        document.getElementById('BlokingOfLevelButton3').style.display = 'none'
+        document.getElementById('lockBtn3').style.display = 'none'
+        document.getElementById('pLock3').style.display = 'none'
         displayOnCoociesFifty()
     }
-    if (lokalcost.purchaseBestButtonSafe) {
+    if (purchaseBestButton) {
+        document.getElementById('gold').textContent = goldNum.toString() + '$'
+        document.getElementById('BlokingOfLevelButton4').style.display = 'none'
+        document.getElementById('lockBtn4').style.display = 'none'
+        document.getElementById('pLock4').style.display = 'none'
         displayOnCoociesHyndryate()
     }
-    console.log(lokalcost.purchaseBadButtonSafe, lokalcost.purchaseOkButtonSafe, lokalcost.purchaseGoodButtonSafe, lokalcost.purchaseBestButtonSafe)
 }
 
 function purchaseBadClicer () {
@@ -59,7 +70,7 @@ function purchaseBadClicer () {
         document.getElementById('gold').textContent = goldNum.toString() + '$'
         document.getElementById('BlokingOfLevelButton').style.display = 'none'
         document.getElementById('lockBtn').style.display = 'none'
-        lokalcost.purchaseBadButtonSafe = true
+        document.getElementById('pLock').style.display = 'none'
     }
 }
 
@@ -70,29 +81,29 @@ function purchaseOkClicer () {
         document.getElementById('gold').textContent = goldNum.toString() + '$'
         document.getElementById('BlokingOfLevelButton2').style.display = 'none'
         document.getElementById('lockBtn2').style.display = 'none'
-        lokalcost.purchaseOkButtonSafe = true
+        document.getElementById('pLock2').style.display = 'none'
     }
 }
 
 function purchaseGoodClicer () {
-    if (goldNum >= 2000) {
-        goldNum = goldNum - 2000
+    if (goldNum >= 1000) {
+        goldNum = goldNum - 1000
         document.getElementById('gold').textContent = goldNum.toString() + '$'
         purchaseGoodButton = true
         document.getElementById('BlokingOfLevelButton3').style.display = 'none'
         document.getElementById('lockBtn3').style.display = 'none'
-        lokalcost.purchaseGoodButtonSafe = true
+        document.getElementById('pLock3').style.display = 'none'
     }
 }
 
 function purchaseBestClicer () {
-    if (goldNum >= 10000) {
+    if (goldNum >= 5000) {
         purchaseBestButton = true
-        goldNum = goldNum - 10000
+        goldNum = goldNum - 5000
         document.getElementById('gold').textContent = goldNum.toString() + '$'
         document.getElementById('BlokingOfLevelButton4').style.display = 'none'
         document.getElementById('lockBtn4').style.display = 'none'
-        lokalcost.purchaseBestButtonSafe = true
+        document.getElementById('pLock4').style.display = 'none'
     }
 }
 

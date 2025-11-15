@@ -157,27 +157,35 @@ body, canvas, div, html, iframe {
 #BlokingOfLevelButton {
     position: absolute;
     left: 47px;
-    top: 130px;
+    top: 145px;
 }
 
 #BlokingOfLevelButton2 {
     position: absolute;
     left: 47px;
-    top: 230px;
+    top: 240px;
 }
 
 #BlokingOfLevelButton3 {
     position: absolute;
     left: 47px;
-    top: 310px;
+    top: 330px;
 }
 
 #BlokingOfLevelButton4 {
     position: absolute;
     left: 47px;
-    top: 410px;
+    top: 430px;
 }
 
 .NumberOfGold {
     position: absolute;
+}
+
+.saveBtns {
+    margin-right: 5px;
+    position: relative;
+    border: black 3px double;
+    border-radius: 5px;
+    background: linear-gradient(15grad,#01f0ff,#46ff46,#ffe257,#ff51ca);
 }
