@@ -189,3 +189,12 @@ body, canvas, div, html, iframe {
     border-radius: 5px;
     background: linear-gradient(15grad,#01f0ff,#46ff46,#ffe257,#ff51ca);
 }
+
+.saveBtns:hover {
+    margin-right: 5px;
+    position: relative;
+    border: black 3px double;
+    border-radius: 5px;
+    background: linear-gradient(15grad,#46ff46,#ffe257,#ff51ca,#01f0ff);
+}
+}
