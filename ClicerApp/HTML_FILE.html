@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="IMEGES/cookie%20100.png">
+    <link rel="stylesheet" href= 'play.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cliker</title>
+</head>
+<body>
+<div class="root">
+<script src="index.js"></script>
+<div>
+    <div class="numberGold divBorder">
+        <p id="gold">0$</p>
+        <button class="startbutton" onclick="start()">&circlearrowright;</button>
+    </div>
+</div>
+
+<div class="adapts">
+<button class="clickerBtn clickerBtnOne"
+        id="coocke1"
+        onclick="exectorNewButtonsLevelActive('buttonLevelOne')"><img src="IMEGES/coockie 1.png" class="clickerBtnImg"></button>
+<button class="clickerBtn clickerBtnFive"
+        id="coocke5"
+        onclick="exectorNewButtonsLevelActive('buttonLevelTwo')"><img src="IMEGES/cookie 5.png" class="clickerBtnImg"></button>
+<button class="clickerBtn clickerBtnTen"
+        id="coocke10"
+        onclick="exectorNewButtonsLevelActive('buttonLevelThree')"><img src="IMEGES/cookie 10.webp" class="clickerBtnImg"></button>
+<button class="clickerBtn clickerBtnFifty"
+        id="coocke50"
+        onclick="exectorNewButtonsLevelActive('buttonLevelFour')"><img src="IMEGES/cookie 50.png" class="clickerBtnImg"></button>
+<button class="clickerBtn clickerBtnHyndryate"
+        id="coocke100"
+        onclick="exectorNewButtonsLevelActive('buttonLevelFive')"><img src="IMEGES/cookie 100.png" class="clickerBtnImg"></button>
+</div>
+
+<div class="levelButonDiv divBorder">
+
+    <Button class="saveBtns" id="SafeBtn" onclick="exectorFunctionsSave('safe')">Safe</Button>
+    <button class="saveBtns" id="UnSafeBtn" onclick="exectorFunctionsSave('UnSafe')">UnSafe</button>
+
+    <div class="blockingDiv divBorder" id="BlokingOfLevelButton">Bloking</div>
+    <div class="blockingDiv divBorder" id="BlokingOfLevelButton2">Bloking</div>
+    <div class="blockingDiv divBorder" id="BlokingOfLevelButton3">Bloking</div>
+    <div class="blockingDiv divBorder" id="BlokingOfLevelButton4">Bloking</div>
+
+    <button class="levelButton" onclick="exectorTransitionOfCocies('displayOnCoociesOne')"><img src="IMEGES/coockie 1.png"></button>
+    <button class="levelButton" onclick="exectorTransitionOfCocies('displayOnCoociesFive')"><img src="IMEGES/cookie 5.png"></button>
+    <button class="levelButton" onclick="exectorTransitionOfCocies('displayOnCoociesTen')"><img src="IMEGES/cookie 10.webp"></button>
+    <button class="levelButton" onclick="exectorTransitionOfCocies('displayOnCoociesFifty')"><img src="IMEGES/cookie 50.png"></button>
+    <button class="levelButton" onclick="exectorTransitionOfCocies('displayOnCoociesHyndryate')"><img src="IMEGES/cookie 100.png"></button>
+    <div class="locks">
+        <button id = 'lockBtn' onclick="exectorPurchaseButtons('purchaseBadClicer')" class="locksBtn"><img id="lock" src="IMEGES/lock.png" class="Lokker"/><p id = 'pLock'> 50$</p></button>
+        <button id = 'lockBtn2' onclick="exectorPurchaseButtons('purchaseOkClicer')" class="locksBtn"><img id="lock2" src="IMEGES/lock.png" class="Lokker"/><p id = 'pLock2'>500$</p></button>
+        <button id = 'lockBtn3' onclick="exectorPurchaseButtons('purchaseGoodClicer')" class="locksBtn"><img id="lock3" src="IMEGES/lock.png" class="Lokker"/><p id = 'pLock3'>1.000$</p></button>
+        <button id = 'lockBtn4' onclick="exectorPurchaseButtons('purchaseBestClicer')" class="locksBtn"><img id="lock4" src="IMEGES/lock.png" class="Lokker"/><p id = 'pLock4'>5.000$</p></button>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
